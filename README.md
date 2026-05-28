@@ -36,7 +36,7 @@ Official documentation:
 ## Week 2 — Android Layouts and Resources
 
 Topics covered:
-- Layouts (Linear, Relative, Constraint)
+- Layouts (Linear, Constraint)
 - XML UI design
 - String resources
 
