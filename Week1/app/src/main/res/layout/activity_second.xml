@@ -8,7 +8,6 @@
     tools:context=".SecondActivity"
     android:background="@color/Aqua"
     android:layout_gravity="center"
-
     >
 
     <ImageView
