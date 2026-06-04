@@ -1,10 +1,13 @@
 package com.example.week3;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -23,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
     Spinner yob_spinner;
     Spinner college_spinner;
     Button save_button;
-    RecyclerView std_table;
+    ListView std_table;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,19 @@ public class MainActivity extends AppCompatActivity {
         yob_spinner = findViewById(R.id.yob);
         college_spinner = findViewById(R.id.collegeName);
         save_button = findViewById(R.id.save_std);
+        std_table = findViewById(R.id.listview);
+
+        StudentsBaseAdapter adapter = new StudentsBaseAdapter(StudentService.shared.list, this);
+        std_table.setAdapter(adapter);
+        std_table.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MainActivity.this, "Selected Student' name "+ StudentService.shared.list.get(position).name +" Year of birth " +StudentService.shared.list.get(position).yob,
+                        Toast.LENGTH_SHORT).show();
+                Intent goToDetailsIntent = new Intent(MainActivity.this,StudentInfoActivity.class );
+                startActivity(goToDetailsIntent);
+            }
+        });
 
         String[] listOfColleges = new String[]{
                 "Seneca College",
@@ -81,12 +98,19 @@ public class MainActivity extends AppCompatActivity {
                                yob,
                                selectedCollege
                                );
+                    adapter.notifyDataSetChanged();// very important
 
-                    Toast.makeText(MainActivity.this, "New Student "+ name +" has been added  to the app," + yob + " - college:  " + selectedCollege,
-                            Toast.LENGTH_SHORT).show();
+                    std_name_text.setText("");
+                    yob_spinner.setSelection(0);
+                    college_spinner.setSelection(0);
 
                 }
             }
         });
+
+
+
     }
+
+
 }

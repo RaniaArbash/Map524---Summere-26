@@ -10,6 +10,5 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:text="Seneca College"
-        android:textColor="@color/Salmon"
         android:textSize="30sp" />
 </LinearLayout>
