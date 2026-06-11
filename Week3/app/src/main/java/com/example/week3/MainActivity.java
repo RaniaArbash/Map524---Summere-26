@@ -48,7 +48,11 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(MainActivity.this, "Selected Student' name "+ StudentService.shared.list.get(position).name +" Year of birth " +StudentService.shared.list.get(position).yob,
                         Toast.LENGTH_SHORT).show();
+                //Explicit Intent
                 Intent goToDetailsIntent = new Intent(MainActivity.this,StudentInfoActivity.class );
+                // Extras with Bundle
+                goToDetailsIntent.putExtra("selectedStudent",StudentService.shared.list.get(position));
+
                 startActivity(goToDetailsIntent);
             }
         });
