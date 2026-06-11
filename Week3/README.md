@@ -13,6 +13,8 @@ This repository currently includes projects aligned with specific weeks of the c
 |-----|------|
 | Week 1 | Android Basics and Android Studio Introduction |
 | Week 2 | Android Layouts and Resources |
+| Week 3 | String Adapters and Spinner |
+| Week 4 | Base Adapter, Navigation and Intents|
 
 
 # Projects
@@ -46,3 +48,24 @@ Resources:
 - https://developer.android.com/guide/topics/resources/providing-resources  
 
 ---
+## Week 3 — Adapters and Spinners
+
+Topics covered:
+- ArrayAdapter & Spinner
+
+Resources:
+- https://developer.android.com/reference/android/widget/ArrayAdapter  
+
+---
+
+## Week 4 — Base Adapter
+
+Topics covered:
+- Listview and Base Adapter
+- Intents and navigation
+
+Resources:
+- https://developer.android.com/reference/android/widget/ListView  
+
+---
+
