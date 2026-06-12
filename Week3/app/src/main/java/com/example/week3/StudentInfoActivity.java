@@ -2,6 +2,7 @@ package com.example.week3;
 
 import android.app.SearchManager;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -11,6 +12,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Objects;
@@ -21,6 +24,8 @@ public class StudentInfoActivity extends AppCompatActivity {
     Button openCameraButton;
     Button web_search_Button;
     EditText query_text;
+
+    private ActivityResultLauncher<Intent> myLauncher;
 
     @Override
     protected void onResume() {
@@ -60,6 +65,16 @@ public class StudentInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_student_info);
         Student selectedStd =  Objects.requireNonNull(getIntent().getExtras()).getParcelable("selectedStudent");
 
+        myLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(), result -> {
+                    if (result.getResultCode() == RESULT_OK && result.getData() != null) {
+                        Bitmap thumbnail = result.getData().getParcelableExtra("data", Bitmap.class);
+                       stdphoto.setImageBitmap(thumbnail);
+                      // selectedStd.std_img = thumbnail;
+                        assert selectedStd != null;
+                        StudentService.shared.updateStdImage(thumbnail,selectedStd);
+                    }
+                });
 
         openCameraButton =  findViewById(R.id.camera_button);
         stdphoto = findViewById(R.id.std_photo);
@@ -70,7 +85,8 @@ public class StudentInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivity(cameraIntent);
+                //startActivity(cameraIntent);
+                myLauncher.launch(cameraIntent);
             }
         });
 

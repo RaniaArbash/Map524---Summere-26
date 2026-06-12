@@ -1,5 +1,7 @@
 package com.example.week3;
 
+import android.graphics.Bitmap;
+
 import java.util.ArrayList;
 
 public class StudentService {
@@ -12,6 +14,10 @@ public class StudentService {
 
     void saveNewStudent(Student std){
         list.add(std);
+    }
+
+    void updateStdImage(Bitmap img, Student tobeupdated){
+        tobeupdated.std_img = img;
     }
 
     void saveNewStudent(String name, int yob, String college){

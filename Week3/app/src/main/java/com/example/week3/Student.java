@@ -1,5 +1,6 @@
 package com.example.week3;
 
+import android.graphics.Bitmap;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -11,6 +12,7 @@ public class Student implements Parcelable {
     int yob;
     String collegeName;
 
+    Bitmap std_img;// this is not primitive type so can't be parcelable
     public Student(String name, int yob, String collegeName) {
         this.name = name;
         this.yob = yob;
