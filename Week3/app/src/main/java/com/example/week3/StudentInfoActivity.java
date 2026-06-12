@@ -4,6 +4,7 @@ import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,11 +21,45 @@ public class StudentInfoActivity extends AppCompatActivity {
     Button openCameraButton;
     Button web_search_Button;
     EditText query_text;
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("lifecycle","Student Activity - On Resume");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("lifecycle","Student Activity - On Destroy");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("lifecycle","Student Activity - On Restart");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("lifecycle","Student Activity - On Stop");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("lifecycle","Student Activity - On Start");
+    }
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+        Log.d("lifecycle","Student Activity - On Create");
+
         setContentView(R.layout.activity_student_info);
         Student selectedStd =  Objects.requireNonNull(getIntent().getExtras()).getParcelable("selectedStudent");
+
 
         openCameraButton =  findViewById(R.id.camera_button);
         stdphoto = findViewById(R.id.std_photo);
