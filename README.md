@@ -13,7 +13,9 @@ This repository currently includes projects aligned with specific weeks of the c
 |-----|------|
 | Week 1 | Android Basics and Android Studio Introduction |
 | Week 2 | Android Layouts and Resources |
-| Week 3 | Adapters and List-Based Views |
+| Week 3 | Adapters and Spinners|
+| Week 4 | Base Adapter and ListView|
+| Week 5 | Intents and Activity Lifecycle  |
 
 
 # Projects
@@ -60,3 +62,27 @@ Resources:
 - https://developer.android.com/reference/android/widget/ArrayAdapter  
 
 ---
+## Week 4 — Base Adapter and ListView
+
+Topics covered:
+- ListView
+- BaseAdapter
+
+Resources:
+- https://developer.android.com/reference/android/widget/ListView  
+- https://developer.android.com/reference/android/widget/ArrayAdapter  
+
+---
+## Week 5 — Intents and Activity Lifecycle 
+
+Topics covered:
+- Intents and navigation
+- Activity lifecycle
+- Camera usage
+
+Resources:
+- https://developer.android.com/guide/components/intents-filters  
+- https://developer.android.com/guide/components/activities/activity-lifecycle  
+
+---
+
