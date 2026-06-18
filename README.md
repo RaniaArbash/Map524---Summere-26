@@ -50,7 +50,7 @@ Resources:
 
 ---
 
-## Week 3 — Adapters and List-Based Views
+## Week 3 — Adapters and Spinners
 
 Topics covered:
 - Localization
