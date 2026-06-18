@@ -72,7 +72,7 @@ public class StudentInfoActivity extends AppCompatActivity {
                        stdphoto.setImageBitmap(thumbnail);
                       // selectedStd.std_img = thumbnail;
                         assert selectedStd != null;
-                        StudentService.shared.updateStdImage(thumbnail,selectedStd);
+                  //      StudentService.shared.updateStdImage(thumbnail,selectedStd);
                     }
                 });
 

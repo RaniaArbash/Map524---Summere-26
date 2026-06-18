@@ -16,9 +16,9 @@ public class StudentService {
         list.add(std);
     }
 
-    void updateStdImage(Bitmap img, Student tobeupdated){
-        tobeupdated.std_img = img;
-    }
+//    void updateStdImage(Bitmap img, Student tobeupdated){
+//        tobeupdated.std_img = img;
+//    }
 
     void saveNewStudent(String name, int yob, String college){
         list.add(new Student(name,yob,college));
