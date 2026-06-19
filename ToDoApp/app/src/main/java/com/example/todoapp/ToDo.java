@@ -1,8 +1,9 @@
 package com.example.todoapp;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class ToDo {
+public class ToDo implements Serializable {
     String task;
     Date date_time;
     Boolean isUrgent;

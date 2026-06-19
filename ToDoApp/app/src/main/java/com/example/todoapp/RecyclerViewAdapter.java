@@ -8,6 +8,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -15,13 +16,20 @@ import java.util.ArrayList;
 public class RecyclerViewAdapter
         extends RecyclerView.Adapter<RecyclerViewAdapter.ToDoViewHolder>{
 
-    ArrayList<ToDo> todoList;
-    Context context;
 
-    public RecyclerViewAdapter(ArrayList<ToDo> todoList, Context context) {
-        this.todoList = todoList;
-        this.context = context;
+    interface TaskUpdatingListener {
+        void taskUpdated(int position);
     }
+
+    TaskUpdatingListener listener;
+    ArrayList<ToDo> todoList;
+    //Context context;
+
+    public RecyclerViewAdapter(ArrayList<ToDo> todoList) {
+        this.todoList = todoList;
+    }
+
+
 
     // inner class
     class ToDoViewHolder extends RecyclerView.ViewHolder{
@@ -51,7 +59,7 @@ public class RecyclerViewAdapter
     @NonNull
     @Override
     public ToDoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.todo_row_layout,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.todo_row_layout,parent,false);
         return new ToDoViewHolder(v);
     }
 
@@ -63,9 +71,23 @@ public class RecyclerViewAdapter
         holder.urgentSwitch.setChecked(item.isUrgent);
 
         if (item.isUrgent)
-            holder.itemView.setBackgroundColor(context.getResources().getColor(R.color.red));
+            holder.itemView.setBackgroundColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.red));
         else
-            holder.itemView.setBackgroundColor(context.getResources().getColor(R.color.green));
+            holder.itemView.setBackgroundColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.green));
+
+        holder.urgentSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // will notify when the switch clicked
+                // MainActivity can update the task
+                ///  here now way to update the task
+                int index = holder.getBindingAdapterPosition();
+                listener.taskUpdated(index);
+
+
+            }
+        });
+
 
     }
 
@@ -73,5 +95,5 @@ public class RecyclerViewAdapter
     @Override
     public int getItemCount() {
         return todoList.size();
-    }
+    }// 10
 }
