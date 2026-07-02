@@ -16,6 +16,7 @@ This repository currently includes projects aligned with specific weeks of the c
 | Week 3 | Adapters and Spinners|
 | Week 4 | Base Adapter and ListView|
 | Week 5 | Intents and Activity Lifecycle  |
+| **Week 6** | **RecyclerView** |
 
 
 # Projects
@@ -85,4 +86,24 @@ Resources:
 - https://developer.android.com/guide/components/activities/activity-lifecycle  
 
 ---
+
+## Week 6 — RecyclerView
+
+Topics covered:
+- Why RecyclerView?
+- RecyclerView architecture
+- RecyclerView.Adapter
+- RecyclerView.ViewHolder
+- LayoutManager (Linear, Grid, Staggered Grid)
+- Handling click events
+- Updating RecyclerView data
+- ItemDecoration and item spacing (optional)
+
+Resources:
+- https://developer.android.com/develop/ui/views/layout/recyclerview
+- https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView
+- https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter
+- https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.ViewHolder
+- https://developer.android.com/reference/androidx/recyclerview/widget/LinearLayoutManager
+- https://developer.android.com/reference/androidx/recyclerview/widget/GridLayoutManager
 
