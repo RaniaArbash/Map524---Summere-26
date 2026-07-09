@@ -17,7 +17,8 @@ This repository currently includes projects aligned with specific weeks of the c
 | Week 4 | Base Adapter and ListView|
 | Week 5 | Intents and Activity Lifecycle  |
 | Week 6 | RecyclerView |
-| **Week 7** | **Introduction to Jetpack Compose (Declarative UI)** |
+| Week 7 | Midterm Interviews |
+| **Week 8** | **Introduction to Jetpack Compose (Declarative UI)** |
 
 
 
