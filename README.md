@@ -16,7 +16,10 @@ This repository currently includes projects aligned with specific weeks of the c
 | Week 3 | Adapters and Spinners|
 | Week 4 | Base Adapter and ListView|
 | Week 5 | Intents and Activity Lifecycle  |
-| **Week 6** | **RecyclerView** |
+| Week 6 | RecyclerView |
+| Week 7 | Midterm Interviews |
+| **Week 8** | **Introduction to Jetpack Compose (Declarative UI)** |
+
 
 
 # Projects
@@ -107,3 +110,7 @@ Resources:
 - https://developer.android.com/reference/androidx/recyclerview/widget/LinearLayoutManager
 - https://developer.android.com/reference/androidx/recyclerview/widget/GridLayoutManager
 
+## Week 8 — Jetpack Compose Basics
+Resources:
+
+https://developer.android.com/jetpack/compose
