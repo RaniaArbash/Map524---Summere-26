@@ -32,7 +32,7 @@ import com.example.week8_v2project.ui.theme.Week8V2ProjectTheme
 // 6 + 1 = 7
 
 class MainActivity : ComponentActivity() {
-
+// navigation is not done via activity
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
