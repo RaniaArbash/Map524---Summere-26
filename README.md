@@ -18,7 +18,8 @@ This repository currently includes projects aligned with specific weeks of the c
 | Week 5 | Intents and Activity Lifecycle  |
 | Week 6 | RecyclerView |
 | Week 7 | Midterm Interviews |
-| **Week 8** | **Introduction to Jetpack Compose (Declarative UI)** |
+| Week 8 | Introduction to Jetpack Compose (Declarative UI) |
+| **Week 9** | **Navigation in Jetpack Compose** |
 
 
 
@@ -114,3 +115,13 @@ Resources:
 Resources:
 
 https://developer.android.com/jetpack/compose
+
+## Week 9 — Navigation
+
+Topics covered:
+- Navigation (NavController)
+
+Resources:
+- https://developer.android.com/guide/navigation
+
+---
