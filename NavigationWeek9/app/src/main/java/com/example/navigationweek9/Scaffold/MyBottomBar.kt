@@ -11,7 +11,7 @@ import com.example.navigationweek9.navigation.NavItems
 
 @Composable
 fun MyButtonBar(onNavigate : (String)-> Unit) {
-    var list = listOf(NavItems.LogIn , NavItems.StudentList, NavItems.Calculator)
+    var list = listOf(NavItems.LogIn , NavItems.StudentList, NavItems.Calculator, NavItems.CounterScreen)
 
     var selectedIndex = remember { mutableStateOf(0) };// remember the selected screen
 

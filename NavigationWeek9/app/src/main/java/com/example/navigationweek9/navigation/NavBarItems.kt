@@ -11,4 +11,7 @@ sealed class NavItems {
     object Welcome : Item("welcome","Welcome", Icons.Default.Face)
     object Calculator : Item("calculator","Calculator", Icons.Default.AddCircle)
     object StudentList: Item("List", "Students List",Icons.Default.DateRange)
+
+    object CounterScreen: Item("Counter", "Counter",Icons.Default.DateRange)
+
 }

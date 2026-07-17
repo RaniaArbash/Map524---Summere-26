@@ -8,6 +8,7 @@ import com.example.navigationweek9.screens.CalculatorScreen
 import com.example.navigationweek9.screens.LogInComposable
 import com.example.navigationweek9.screens.StudentsListScreen
 import com.example.navigationweek9.screens.WelcomeScreen
+import com.example.viewmodeldemo.CounterScreen
 
 
 @Composable
@@ -30,6 +31,9 @@ fun MyNavHost(navController: NavHostController) {
         }
         composable(route = NavItems.StudentList.path) {
             StudentsListScreen()
+        }
+        composable(route = NavItems.CounterScreen.path) {
+            CounterScreen()
         }
     }
 }
