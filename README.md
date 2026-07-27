@@ -19,8 +19,8 @@ This repository currently includes projects aligned with specific weeks of the c
 | Week 6 | RecyclerView |
 | Week 7 | Midterm Interviews |
 | Week 8 | Introduction to Jetpack Compose (Declarative UI) |
-| **Week 9** | **Navigation in Jetpack Compose** |
-
+| Week 9 | Navigation in Jetpack Compose |
+| **Week 10** | **ViewModel in Jetpack Compose & Weather App - V1** |
 
 
 # Projects
@@ -123,5 +123,17 @@ Topics covered:
 
 Resources:
 - https://developer.android.com/guide/navigation
+
+---
+
+## Week 10 — ViewModels and Weather App
+
+Topics covered:
+- ViewModel in Jetpack Compose
+- Repository in Jetpack Compose
+- Weather App V1 
+
+Resources:
+- https://developer.android.com/topic/libraries/architecture/viewmodel
 
 ---
