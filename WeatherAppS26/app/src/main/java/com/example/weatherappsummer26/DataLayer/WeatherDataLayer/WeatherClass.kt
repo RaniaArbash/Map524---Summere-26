@@ -1,4 +1,4 @@
-package com.example.weatherappsummer26.DataLayer
+package com.example.weatherappsummer26.DataLayer.WeatherDataLayer
 
 data class WeatherResponse(
     val name: String,

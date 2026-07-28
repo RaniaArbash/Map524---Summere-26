@@ -1,4 +1,4 @@
-package com.example.weatherappsummer26.UILayer
+package com.example.weatherappsummer26.UILayer.WeatherUILayer
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -11,16 +11,14 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.sp
-import kotlin.collections.get
-import kotlin.toString
 import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
-fun WeatherScreen(weatherVM : WeatherViewModel = viewModel()){
+fun WeatherScreen(cityName: String, weatherVM : WeatherViewModel = viewModel()){
 
     val data = weatherVM.weatherState.collectAsState()
     LaunchedEffect(key1 = "Toronto") {
-        weatherVM.loadWeather("Toronto, ON, Canada")
+        weatherVM.loadWeather(cityName)
     }
 
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
@@ -28,7 +26,7 @@ fun WeatherScreen(weatherVM : WeatherViewModel = viewModel()){
             CircularProgressIndicator()
         }else {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                Text(fontSize = 40.sp, text =  "Toronto" )
+                Text(fontSize = 40.sp, text =  data.value!!.name )
                 Text(fontSize = 50.sp, text =   data.value!!.main.temp.toString()+"C")
                 Text(fontSize = 35.sp, text = "Feels Like: " + data.value!!.main.feels_like.toString())
                 Text(fontSize = 40.sp, text = data.value!!.weather[0].description)

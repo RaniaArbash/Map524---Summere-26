@@ -1,0 +1,7 @@
+package com.example.weatherappsummer26.UILayer.Navigation
+
+object ScreenRoutes {
+    const val CitySearch = "CitySearchStack"
+    const val weatherInLocation = "WeatherInLocation"
+
+}
