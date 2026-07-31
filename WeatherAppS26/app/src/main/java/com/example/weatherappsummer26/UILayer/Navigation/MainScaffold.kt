@@ -19,6 +19,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.example.weatherappsummer26.UILayer.LocationUILayer.GoogleMapScreen
+import com.example.weatherappsummer26.UILayer.LocationUILayer.WeatherInLocationScreen
 import com.example.weatherappsummer26.UILayer.SearchUlLayer.SearchScreen
 import com.example.weatherappsummer26.UILayer.WeatherUILayer.WeatherScreen
 
@@ -50,6 +52,12 @@ fun MainScaffold() {
                     icon = { Icon(Icons.Filled.Place, contentDescription = "Location") },
                     label = { Text("Location") }
                 )
+                NavigationBarItem(
+                    selected = currentRoute == ScreenRoutes.Googlemap,
+                    onClick = { navController.navigate(ScreenRoutes.Googlemap) },
+                    icon = { Icon(Icons.Filled.Place, contentDescription = "Map") },
+                    label = { Text("Map") }
+                )
             }
         }
     ) { innerPadding ->
@@ -73,7 +81,12 @@ fun AppNavHost(navController: NavHostController,
         composable(ScreenRoutes.CitySearch) {
             CitySearchStack()
         }
-
+        composable (ScreenRoutes.weatherInLocation){
+            WeatherInLocationScreen()
+        }
+        composable (ScreenRoutes.Googlemap){
+            GoogleMapScreen()
+        }
     }
 }
 

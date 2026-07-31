@@ -7,9 +7,9 @@ class WeatherRepo {
         return WeatherAPI.api.getWeather(cityName)
     }
 
-    suspend fun getWeatherFromAPIByLocation(lat : Double, log : Double ) {
-        // go to api and get the weather
-        // return WeatherResponse("Toronto")
+    suspend fun getWeatherFromAPIByLocation(lat : Double, lon : Double ): WeatherResponse {
+        //go to api and get the weather
+         return WeatherAPI.api.getWeatherInLocation(lat,lon)
     }
 
 }
