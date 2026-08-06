@@ -20,7 +20,10 @@ This repository currently includes projects aligned with specific weeks of the c
 | Week 7 | Midterm Interviews |
 | Week 8 | Introduction to Jetpack Compose (Declarative UI) |
 | Week 9 | Navigation in Jetpack Compose |
-| **Week 10** | **ViewModel in Jetpack Compose & Weather App - V1** |
+| Week 10 | ViewModel in Jetpack Compose & Weather App - V1 |
+| Week 11 | Networking in Android & Retrofit & Weather App V2 |
+| **Week 12** | **Location In Android & Google Maps & Weather APP V3** |
+
 
 
 # Projects
@@ -135,5 +138,27 @@ Topics covered:
 
 Resources:
 - https://developer.android.com/topic/libraries/architecture/viewmodel
+
+## Week 11 — Networking in Android & Retrofit & Weather App V2
+
+Topics covered:
+- Retrofit in Jetpack Compose
+- Networking in Android App
+- Weather App V2, fetching cities data and weather data
+
+Resources:
+- https://developer.android.com/topic/libraries/architecture/viewmodel](https://developer.android.com/codelabs/basic-android-kotlin-compose-getting-data-internet#4
+
+---
+
+## Week 12 — Location In Android & Google Maps & Weather APP V3
+
+Topics covered:
+- Location in Android App and fetching the device location
+- Google Maps Integration
+- Weather App V3, Getting the weather in the current location and Show the Google Maps
+
+Resources:
+- https://support.google.com/maps/answer/3092445?hl=en&co=GENIE.Platform%3DAndroid
 
 ---
