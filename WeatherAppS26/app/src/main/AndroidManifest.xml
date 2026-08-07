@@ -17,7 +17,7 @@
         android:theme="@style/Theme.WeatherAppSummer26">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="Add Your Key HERE"
+            android:value="AIzaSyCs6td8fbBAThtl94--othRv2jWxLPUB8U"
             />
         <activity
             android:name=".MainActivity"
