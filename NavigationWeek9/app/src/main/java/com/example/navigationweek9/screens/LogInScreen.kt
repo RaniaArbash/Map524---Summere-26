@@ -18,12 +18,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.navigationweek9.Week9ViewModel
 import com.example.navigationweek9.navigation.NavItems
 
 @Composable
-fun LogInComposable(navController: NavHostController) {
+fun LogInComposable(navController: NavHostController,
+                    viewModel: Week9ViewModel = viewModel()) {
 
-    var name by remember { mutableStateOf("") }
 
     Column(
         modifier = Modifier
@@ -33,8 +35,8 @@ fun LogInComposable(navController: NavHostController) {
     ) {
 
         OutlinedTextField(
-            value = name,
-            onValueChange = { name = it },
+            value = viewModel.name,
+            onValueChange = { viewModel.updateName(it)  },
             label = { Text("Enter your name") }
         )
 
@@ -42,7 +44,7 @@ fun LogInComposable(navController: NavHostController) {
 
         Button(
             onClick = {
-                navController.navigate("${NavItems.Welcome.path}/$name")
+                navController.navigate("${NavItems.Welcome.path}/${viewModel.name}")
             }
         ) {
             Text("Go to Counter")

@@ -13,6 +13,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.navigationweek9.Week9ViewModel
 
 data class Student(
     val name: String,
@@ -20,20 +22,7 @@ data class Student(
 )
 
 @Composable
-fun StudentsListScreen() {
-
-    val students = listOf(
-        Student("John Smith", "George Brown College"),
-        Student("Emily Johnson", "Seneca Polytechnic"),
-        Student("Michael Brown", "Humber Polytechnic"),
-        Student("Sarah Wilson", "Centennial College"),
-        Student("David Lee", "Sheridan College"),
-        Student("Olivia Martin", "Algonquin College"),
-        Student("James Taylor", "Fanshawe College"),
-        Student("Sophia White", "Mohawk College"),
-        Student("Daniel Garcia", "Conestoga College"),
-        Student("Emma Anderson", "Durham College")
-    )
+fun StudentsListScreen( viewModel: Week9ViewModel = viewModel()) {
 
     Column(
         modifier = Modifier
@@ -50,7 +39,7 @@ fun StudentsListScreen() {
             verticalArrangement = Arrangement.spacedBy(10.dp),
             modifier = Modifier.padding(top = 16.dp)
         ) {
-            items(students) { student ->
+            items(viewModel.students) { student ->
 
                 Card(
                     modifier = Modifier.fillMaxWidth()
